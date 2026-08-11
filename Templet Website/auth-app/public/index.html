@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AuthFlow — Multi-Role Portal</title>
+  <meta name="description" content="Secure multi-role authentication portal for Admin, Client and Student panels." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Animated Background ──────────────────────── -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+  <div class="bg-grid"></div>
+
+  <!-- ══════════════ LANDING — Role Selector ══════════════ -->
+  <div class="view active" id="viewLanding">
+    <div class="landing-wrap">
+      <div class="landing-logo">
+        <div class="logo-icon-lg">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+            <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" fill="currentColor" opacity="0.9"/>
+            <path d="M9 12L11 14L15 10" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span>AuthFlow</span>
+      </div>
+
+      <div class="landing-hero">
+        <h1>Welcome to <span class="hero-gradient">AuthFlow</span></h1>
+        <p>Select your portal to continue. Each panel has its own secure workspace.</p>
+      </div>
+
+      <div class="role-cards">
+
+        <!-- Admin Card -->
+        <button class="role-card role-admin" id="landingAdminBtn" onclick="selectRole('admin')">
+          <div class="role-card-glow"></div>
+          <div class="role-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"/>
+              <path d="M9 12L11 14L15 10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="role-card-body">
+            <h2>Admin Panel</h2>
+            <p>Manage users, view all panels, oversee operations</p>
+          </div>
+          <div class="role-card-badge">👑 Super Access</div>
+          <div class="role-card-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </button>
+
+        <!-- Client Card -->
+        <button class="role-card role-client" id="landingClientBtn" onclick="selectRole('client')">
+          <div class="role-card-glow"></div>
+          <div class="role-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <div class="role-card-body">
+            <h2>Client Panel</h2>
+            <p>Access your projects, track progress, view reports</p>
+          </div>
+          <div class="role-card-badge">👤 Client Access</div>
+          <div class="role-card-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </button>
+
+        <!-- Student Card -->
+        <button class="role-card role-student" id="landingStudentBtn" onclick="selectRole('student')">
+          <div class="role-card-glow"></div>
+          <div class="role-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <div class="role-card-body">
+            <h2>Student Panel</h2>
+            <p>View courses, assignments, grades and resources</p>
+          </div>
+          <div class="role-card-badge">🎓 Student Access</div>
+          <div class="role-card-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ AUTH PANEL ══════════════ -->
+  <div class="view" id="viewAuth">
+    <div class="auth-panel" id="authPanel">
+
+      <!-- Back button -->
+      <button class="btn-back" id="backBtn" onclick="goBack()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </button>
+
+      <!-- Role Badge -->
+      <div class="auth-role-badge" id="authRoleBadge"></div>
+
+      <!-- Logo -->
+      <div class="logo">
+        <div class="logo-icon" id="authLogoIcon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" fill="currentColor" opacity="0.9"/>
+            <path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="logo-text" id="authLogoText">AuthFlow</span>
+      </div>
+
+      <!-- Tab Switcher (hidden for admin) -->
+      <div class="tab-switcher" id="tabSwitcher">
+        <button class="tab-btn active" id="loginTab" onclick="switchTab('login')">Sign In</button>
+        <button class="tab-btn" id="registerTab" onclick="switchTab('register')">Sign Up</button>
+        <div class="tab-indicator" id="tabIndicator"></div>
+      </div>
+
+      <!-- ── LOGIN FORM ── -->
+      <form class="auth-form active" id="loginForm" onsubmit="handleLogin(event)" novalidate>
+        <div class="form-header">
+          <h1 id="loginTitle">Welcome back</h1>
+          <p id="loginSubtitle">Sign in to your account</p>
+        </div>
+
+        <div class="form-group">
+          <label for="loginUsername">Username</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </span>
+            <input type="text" id="loginUsername" name="username" placeholder="Enter your username" autocomplete="username" required />
+          </div>
+          <span class="field-error" id="loginUsernameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </span>
+            <input type="password" id="loginPassword" name="password" placeholder="Enter your password" autocomplete="current-password" required />
+            <button type="button" class="toggle-password" onclick="togglePassword('loginPassword', this)">
+              <svg class="eye-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          <span class="field-error" id="loginPasswordError"></span>
+        </div>
+
+        <div class="form-options">
+          <label class="checkbox-label" for="rememberMe">
+            <input type="checkbox" id="rememberMe" name="rememberMe" checked />
+            <span class="checkbox-custom"></span>
+            Keep me signed in
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primary" id="loginBtn">
+          <span class="btn-text">Sign In</span>
+          <span class="btn-loader" hidden>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="spin">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+            </svg>
+          </span>
+        </button>
+
+        <div class="form-divider" id="loginDivider"><span>or</span></div>
+        <p class="switch-text" id="loginSwitchText">Don't have an account? <a href="#" onclick="switchTab('register'); return false;">Create one</a></p>
+      </form>
+
+      <!-- ── REGISTER FORM ── -->
+      <form class="auth-form" id="registerForm" onsubmit="handleRegister(event)" novalidate>
+        <div class="form-header">
+          <h1 id="registerTitle">Create Account</h1>
+          <p id="registerSubtitle">Join the portal today</p>
+        </div>
+
+        <div class="form-group">
+          <label for="regUsername">Username</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </span>
+            <input type="text" id="regUsername" name="username" placeholder="Choose a username" autocomplete="username" required minlength="3" />
+          </div>
+          <span class="field-error" id="regUsernameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="regEmail">Email Address</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </span>
+            <input type="email" id="regEmail" name="email" placeholder="Enter your email" autocomplete="email" required />
+          </div>
+          <span class="field-error" id="regEmailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="regPassword">Password</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </span>
+            <input type="password" id="regPassword" name="password" placeholder="Create a password (min 6 chars)" autocomplete="new-password" required minlength="6" />
+            <button type="button" class="toggle-password" onclick="togglePassword('regPassword', this)">
+              <svg class="eye-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          <div class="password-strength" id="strengthBar">
+            <div class="strength-segments">
+              <div class="seg" id="seg1"></div>
+              <div class="seg" id="seg2"></div>
+              <div class="seg" id="seg3"></div>
+              <div class="seg" id="seg4"></div>
+            </div>
+            <span class="strength-label" id="strengthLabel">Strength</span>
+          </div>
+          <span class="field-error" id="regPasswordError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="regConfirmPassword">Confirm Password</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </span>
+            <input type="password" id="regConfirmPassword" name="confirmPassword" placeholder="Repeat your password" autocomplete="new-password" required />
+          </div>
+          <span class="field-error" id="regConfirmPasswordError"></span>
+        </div>
+
+        <button type="submit" class="btn-primary" id="registerBtn">
+          <span class="btn-text">Create Account</span>
+          <span class="btn-loader" hidden>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="spin">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+            </svg>
+          </span>
+        </button>
+
+        <div class="form-divider"><span>or</span></div>
+        <p class="switch-text">Already have an account? <a href="#" onclick="switchTab('login'); return false;">Sign in</a></p>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ══════════════ ADMIN DASHBOARD ══════════════ -->
+  <div class="view" id="viewAdmin">
+    <div class="dashboard dash-admin" id="dashboardAdmin">
+      <!-- Admin Top Nav -->
+      <div class="dash-topnav">
+        <div class="dash-topnav-brand">
+          <div class="dash-brand-icon role-admin-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"/>
+            </svg>
+          </div>
+          <span>Admin Panel</span>
+        </div>
+
+        <!-- Panel Switcher (Admin Exclusive) -->
+        <div class="panel-switcher" id="panelSwitcher">
+          <span class="panel-switcher-label">Switch to:</span>
+          <button class="panel-switch-btn client-switch" onclick="adminViewPanel('client')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            Client Panel
+          </button>
+          <button class="panel-switch-btn student-switch" onclick="adminViewPanel('student')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+            Student Panel
+          </button>
+        </div>
+
+        <div class="dash-topnav-actions">
+          <div class="dash-user-chip" id="adminUserChip">
+            <div class="user-chip-avatar" id="adminAvatarChip">A</div>
+            <span id="adminUsernameChip">Admin</span>
+            <span class="user-chip-role admin-chip">Admin</span>
+          </div>
+          <button class="btn-logout" id="adminLogoutBtn" onclick="handleLogout()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+              <polyline points="16 17 21 12 16 7"/>
+              <line x1="21" y1="12" x2="9" y2="12"/>
+            </svg>
+            Logout
+          </button>
+        </div>
+      </div>
+
+      <!-- Admin Welcome -->
+      <div class="dash-hero">
+        <div class="dash-hero-text">
+          <h1>Welcome back, <span id="adminWelcomeName">Admin</span> 👑</h1>
+          <p>You have full access to all panels and user data.</p>
+        </div>
+        <div class="dash-stats" id="adminStats">
+          <div class="stat-card stat-admin">
+            <span class="stat-number" id="statClients">0</span>
+            <span class="stat-label">Clients</span>
+          </div>
+          <div class="stat-card stat-client">
+            <span class="stat-number" id="statStudents">0</span>
+            <span class="stat-label">Students</span>
+          </div>
+          <div class="stat-card stat-purple">
+            <span class="stat-number" id="statTotal">0</span>
+            <span class="stat-label">Total Users</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Admin User Table -->
+      <div class="dash-content">
+        <div class="table-card">
+          <div class="table-header">
+            <div class="table-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              All Registered Users
+            </div>
+            <div class="table-filters">
+              <button class="filter-btn active" id="filterAll" onclick="filterUsers('all')">All</button>
+              <button class="filter-btn" id="filterClients" onclick="filterUsers('client')">Clients</button>
+              <button class="filter-btn" id="filterStudents" onclick="filterUsers('student')">Students</button>
+            </div>
+          </div>
+          <div class="table-wrap" id="adminUserTable">
+            <div class="table-empty">Loading users…</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════ CLIENT DASHBOARD ══════════════ -->
+  <div class="view" id="viewClient">
+    <div class="dashboard dash-client" id="dashboardClient">
+      <div class="dash-topnav">
+        <div class="dash-topnav-brand">
+          <div class="dash-brand-icon role-client-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <span>Client Panel</span>
+        </div>
+        <div class="dash-topnav-actions">
+          <!-- Admin back button (shown only when admin is viewing client panel) -->
+          <button class="btn-admin-back" id="clientAdminBack" onclick="returnToAdmin()" style="display:none">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to Admin
+          </button>
+          <div class="dash-user-chip" id="clientUserChip">
+            <div class="user-chip-avatar" id="clientAvatarChip">C</div>
+            <span id="clientUsernameChip">Client</span>
+            <span class="user-chip-role client-chip">Client</span>
+          </div>
+          <button class="btn-logout" id="clientLogoutBtn" onclick="handleLogout()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+              <polyline points="16 17 21 12 16 7"/>
+              <line x1="21" y1="12" x2="9" y2="12"/>
+            </svg>
+            Logout
+          </button>
+        </div>
+      </div>
+
+      <div class="dash-hero">
+        <div class="dash-hero-text">
+          <h1>Hello, <span id="clientWelcomeName">Client</span> 👤</h1>
+          <p>Track your projects, manage requests, and view reports.</p>
+        </div>
+      </div>
+
+      <div class="dash-content">
+        <div class="workspace-grid">
+          <div class="workspace-card">
+            <div class="workspace-card-icon client-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <h3>My Projects</h3>
+            <p>3 active projects</p>
+            <div class="workspace-progress">
+              <div class="progress-bar" style="width:65%"></div>
+            </div>
+            <span class="progress-label">65% complete</span>
+          </div>
+          <div class="workspace-card">
+            <div class="workspace-card-icon client-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <h3>Invoices</h3>
+            <p>2 pending, 8 paid</p>
+            <div class="workspace-progress">
+              <div class="progress-bar" style="width:80%"></div>
+            </div>
+            <span class="progress-label">80% settled</span>
+          </div>
+          <div class="workspace-card">
+            <div class="workspace-card-icon client-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <h3>Messages</h3>
+            <p>4 unread messages</p>
+            <div class="workspace-progress">
+              <div class="progress-bar" style="width:40%"></div>
+            </div>
+            <span class="progress-label">4 unread</span>
+          </div>
+          <div class="workspace-card">
+            <div class="workspace-card-icon client-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <h3>Meetings</h3>
+            <p>Next: Tomorrow 10 AM</p>
+            <div class="workspace-progress">
+              <div class="progress-bar" style="width:100%"></div>
+            </div>
+            <span class="progress-label">Scheduled</span>
+          </div>
+        </div>
+
+        <!-- Session Info -->
+        <div class="session-info-card" id="clientSessionCard">
+          <div class="session-info-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Your Session
+          </div>
+          <div class="session-rows" id="clientSessionRows"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ STUDENT DASHBOARD ══════════════ -->
+  <div class="view" id="viewStudent">
+    <div class="dashboard dash-student" id="dashboardStudent">
+      <div class="dash-topnav">
+        <div class="dash-topnav-brand">
+          <div class="dash-brand-icon role-student-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <span>Student Panel</span>
+        </div>
+        <div class="dash-topnav-actions">
+          <!-- Admin back button -->
+          <button class="btn-admin-back" id="studentAdminBack" onclick="returnToAdmin()" style="display:none">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to Admin
+          </button>
+          <div class="dash-user-chip" id="studentUserChip">
+            <div class="user-chip-avatar" id="studentAvatarChip">S</div>
+            <span id="studentUsernameChip">Student</span>
+            <span class="user-chip-role student-chip">Student</span>
+          </div>
+          <button class="btn-logout" id="studentLogoutBtn" onclick="handleLogout()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+              <polyline points="16 17 21 12 16 7"/>
+              <line x1="21" y1="12" x2="9" y2="12"/>
+            </svg>
+            Logout
+          </button>
+        </div>
+      </div>
+
+      <div class="dash-hero">
+        <div class="dash-hero-text">
+          <h1>Good day, <span id="studentWelcomeName">Student</span> 🎓</h1>
+          <p>Continue learning — your progress awaits.</p>
+        </div>
+      </div>
+
+      <div class="dash-content">
+        <div class="workspace-grid">
+          <div class="workspace-card">
+            <div class="workspace-card-icon student-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+            </div>
+            <h3>My Courses</h3>
+            <p>5 enrolled, 2 completed</p>
+            <div class="workspace-progress">
+              <div class="progress-bar" style="width:40%"></div>
+            </div>
+            <span class="progress-label">40% done</span>
+          </div>
+          <div class="workspace-card">
+            <div class="workspace-card-icon student-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M9 11l3 3L22 4"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+            </div>
+            <h3>Assignments</h3>
+            <p>3 due this week</p>
+            <div class="workspace-progress">
+              <div class="progress-bar" style="width:33%"></div>
+            </div>
+            <span class="progress-label">1 of 3 done</span>
+          </div>
+          <div class="workspace-card">
+            <div class="workspace-card-icon student-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3>Attendance</h3>
+            <p>Present 18/20 days</p>
+            <div class="workspace-progress">
+              <div class="progress-bar" style="width:90%"></div>
+            </div>
+            <span class="progress-label">90%</span>
+          </div>
+          <div class="workspace-card">
+            <div class="workspace-card-icon student-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <h3>Grades</h3>
+            <p>GPA: 3.7 / 4.0</p>
+            <div class="workspace-progress">
+              <div class="progress-bar" style="width:92%"></div>
+            </div>
+            <span class="progress-label">Excellent</span>
+          </div>
+        </div>
+
+        <!-- Session Info -->
+        <div class="session-info-card" id="studentSessionCard">
+          <div class="session-info-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Your Session
+          </div>
+          <div class="session-rows" id="studentSessionRows"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Toast ──────────────────────────────────── -->
+  <div class="toast" id="toast" role="alert" aria-live="polite">
+    <div class="toast-icon" id="toastIcon"></div>
+    <div class="toast-message" id="toastMsg"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
