@@ -1,0 +1,23 @@
+﻿# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build Results
+[Bb]in/
+[Oo]bj/
+
+# Rider / Resharper
+.idea/
+*.DotSettings.user
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+[Nn]ame[Tt]ype
+[Dd]esktop.ini
+.BIN/
+.DS_Store
