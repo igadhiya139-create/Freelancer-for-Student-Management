@@ -1,2 +1,0 @@
-Changed database context to 'FreelanceStudentDB'.
-Database setup complete! Default admin: username=admin, password=admin123
