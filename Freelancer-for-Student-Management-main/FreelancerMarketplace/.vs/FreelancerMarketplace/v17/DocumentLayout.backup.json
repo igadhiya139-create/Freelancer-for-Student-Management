@@ -1,0 +1,283 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\New folder\\FreelancerMarketplace\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|d:\\new folder\\freelancermarketplace\\adminpanel\\activitylogs.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:adminpanel\\activitylogs.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shaha\\AppData\\Local\\Temp\\e936d856-1a4b-409a-9ded-2cf02d3cba29_WebApplication9.zip.WebApplication9.zip\\WebApplication9\\WebForm1.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|D:\\New folder\\FreelancerMarketplace\\adminpanel\\categoriesskills.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:adminpanel\\categoriesskills.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|D:\\New folder\\FreelancerMarketplace\\adminpanel\\dashboard.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:adminpanel\\dashboard.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|D:\\New folder\\FreelancerMarketplace\\adminpanel\\dashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:adminpanel\\dashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|D:\\New folder\\FreelancerMarketplace\\studentpanel\\skillsmanagement.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:studentpanel\\skillsmanagement.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|D:\\New folder\\FreelancerMarketplace\\studentpanel\\skillsmanagement.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:studentpanel\\skillsmanagement.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|D:\\New folder\\FreelancerMarketplace\\adminpanel\\activitylogs.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:adminpanel\\activitylogs.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|D:\\New folder\\FreelancerMarketplace\\adminpanel\\activitylogs.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:adminpanel\\activitylogs.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|D:\\New folder\\FreelancerMarketplace\\adminpanel\\categoriesskills.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:adminpanel\\categoriesskills.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|D:\\New folder\\FreelancerMarketplace\\adminpanel\\categoriesskills.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:adminpanel\\categoriesskills.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|D:\\New folder\\FreelancerMarketplace\\adminpanel\\adminprofile.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:adminpanel\\adminprofile.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|D:\\New folder\\FreelancerMarketplace\\adminpanel\\adminprofile.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:adminpanel\\adminprofile.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|D:\\New folder\\FreelancerMarketplace\\studentpanel\\applyproject.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:studentpanel\\applyproject.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|D:\\New folder\\FreelancerMarketplace\\studentpanel\\applyproject.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:studentpanel\\applyproject.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|D:\\New folder\\FreelancerMarketplace\\adminpanel\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{2A7B8F34-C6D5-4E91-B823-A1F2E5D3C7B9}|FreelancerMarketplace.csproj|solutionrelative:adminpanel\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WebForm1.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\shaha\\AppData\\Local\\Temp\\e936d856-1a4b-409a-9ded-2cf02d3cba29_WebApplication9.zip.WebApplication9.zip\\WebApplication9\\WebForm1.aspx.cs",
+              "ToolTip": "C:\\Users\\shaha\\AppData\\Local\\Temp\\e936d856-1a4b-409a-9ded-2cf02d3cba29_WebApplication9.zip.WebApplication9.zip\\WebApplication9\\WebForm1.aspx.cs [Read Only]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T16:11:47.983Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ActivityLogs.aspx",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\ActivityLogs.aspx",
+              "RelativeDocumentMoniker": "AdminPanel\\ActivityLogs.aspx",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\ActivityLogs.aspx",
+              "RelativeToolTip": "AdminPanel\\ActivityLogs.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-29T07:03:01.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoriesSkills.aspx",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\CategoriesSkills.aspx",
+              "RelativeDocumentMoniker": "AdminPanel\\CategoriesSkills.aspx",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\CategoriesSkills.aspx",
+              "RelativeToolTip": "AdminPanel\\CategoriesSkills.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-29T07:02:49.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dashboard.aspx.designer.cs",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\Dashboard.aspx.designer.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\Dashboard.aspx.designer.cs",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\Dashboard.aspx.designer.cs",
+              "RelativeToolTip": "AdminPanel\\Dashboard.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T06:18:32.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dashboard.aspx.cs",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\Dashboard.aspx.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\Dashboard.aspx.cs",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\Dashboard.aspx.cs",
+              "RelativeToolTip": "AdminPanel\\Dashboard.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T06:18:30.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SkillsManagement.aspx.designer.cs",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\StudentPanel\\SkillsManagement.aspx.designer.cs",
+              "RelativeDocumentMoniker": "StudentPanel\\SkillsManagement.aspx.designer.cs",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\StudentPanel\\SkillsManagement.aspx.designer.cs",
+              "RelativeToolTip": "StudentPanel\\SkillsManagement.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T06:16:24.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SkillsManagement.aspx.cs",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\StudentPanel\\SkillsManagement.aspx.cs",
+              "RelativeDocumentMoniker": "StudentPanel\\SkillsManagement.aspx.cs",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\StudentPanel\\SkillsManagement.aspx.cs",
+              "RelativeToolTip": "StudentPanel\\SkillsManagement.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T06:16:22.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ActivityLogs.aspx.cs",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\ActivityLogs.aspx.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\ActivityLogs.aspx.cs",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\ActivityLogs.aspx.cs",
+              "RelativeToolTip": "AdminPanel\\ActivityLogs.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T06:14:43.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ActivityLogs.aspx.designer.cs",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\ActivityLogs.aspx.designer.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\ActivityLogs.aspx.designer.cs",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\ActivityLogs.aspx.designer.cs",
+              "RelativeToolTip": "AdminPanel\\ActivityLogs.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T06:14:20.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApplyProject.aspx.designer.cs",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\StudentPanel\\ApplyProject.aspx.designer.cs",
+              "RelativeDocumentMoniker": "StudentPanel\\ApplyProject.aspx.designer.cs",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\StudentPanel\\ApplyProject.aspx.designer.cs",
+              "RelativeToolTip": "StudentPanel\\ApplyProject.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T06:10:45.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AdminProfile.aspx.cs",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\AdminProfile.aspx.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\AdminProfile.aspx.cs",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\AdminProfile.aspx.cs",
+              "RelativeToolTip": "AdminPanel\\AdminProfile.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T06:09:43.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdminProfile.aspx.designer.cs",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\AdminProfile.aspx.designer.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\AdminProfile.aspx.designer.cs",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\AdminProfile.aspx.designer.cs",
+              "RelativeToolTip": "AdminPanel\\AdminProfile.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T06:09:53.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CategoriesSkills.aspx.cs",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\CategoriesSkills.aspx.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\CategoriesSkills.aspx.cs",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\CategoriesSkills.aspx.cs",
+              "RelativeToolTip": "AdminPanel\\CategoriesSkills.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T06:10:26.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CategoriesSkills.aspx.designer.cs",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\CategoriesSkills.aspx.designer.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\CategoriesSkills.aspx.designer.cs",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\CategoriesSkills.aspx.designer.cs",
+              "RelativeToolTip": "AdminPanel\\CategoriesSkills.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T06:10:28.455Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ApplyProject.aspx.cs",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\StudentPanel\\ApplyProject.aspx.cs",
+              "RelativeDocumentMoniker": "StudentPanel\\ApplyProject.aspx.cs",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\StudentPanel\\ApplyProject.aspx.cs",
+              "RelativeToolTip": "StudentPanel\\ApplyProject.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T06:10:41.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Dashboard.aspx",
+              "DocumentMoniker": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\Dashboard.aspx",
+              "RelativeDocumentMoniker": "AdminPanel\\Dashboard.aspx",
+              "ToolTip": "D:\\New folder\\FreelancerMarketplace\\AdminPanel\\Dashboard.aspx",
+              "RelativeToolTip": "AdminPanel\\Dashboard.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-28T16:02:11.606Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
