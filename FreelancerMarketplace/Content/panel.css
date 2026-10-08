@@ -301,3 +301,24 @@ textarea.form-control { resize:vertical; }
     div.content { padding:14px 16px; }
     .form-row, .grid-3 { grid-template-columns:1fr; }
 }
+
+/* Student Panel Responsive & Visual Utilities */
+.student-stat-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.student-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.student-tag-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 9999px;
+    background-color: #e0e7ff;
+    color: #4338ca;
+}
+.student-action-btn {
+    transition: all 0.15s ease-in-out;
+}
