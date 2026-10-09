@@ -69,7 +69,8 @@
                 <a href="About.aspx">About</a> &nbsp;|&nbsp;
                 <a href="Contact.aspx">Contact</a> &nbsp;|&nbsp;
                 <a href="Register.aspx">Register</a> &nbsp;|&nbsp;
-                <a href="Login.aspx">Login</a>
+                <a href="Login.aspx">Login</a> &nbsp;|&nbsp;
+                <a href="StudentPanel/Dashboard.aspx">Student Portal</a>
             </p>
         </div>
     </footer>
