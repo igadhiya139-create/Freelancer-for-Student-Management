@@ -20,3 +20,9 @@ A specialized web portal connecting students with client freelance opportunities
 - **Framework**: ASP.NET Web Forms (.NET Framework 4.8)
 - **Database**: Microsoft SQL Server
 - **Frontend**: Bootstrap 5, Bootstrap Icons, Custom CSS
+
+## Deployment & Build Notes
+- Ensure MSBuild or Visual Studio 2022+ targeting .NET Framework 4.8 is installed.
+- Restore NuGet packages if applicable and build FreelancerMarketplace.sln.
+- Connection string can be configured in FreelancerMarketplace/Web.config under <connectionStrings>.
+- Execute FreelancerMarketplaceDB_Setup.sql against your Microsoft SQL Server instance before running the application.
