@@ -1,0 +1,82 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.Master.cs" Inherits="SiteMaster" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Freelancer Marketplace for Students — Connect student freelancers with clients for real-world projects." />
+    <title>
+        <asp:ContentPlaceHolder ID="PageTitle" runat="server">
+            Freelancer Marketplace for Students
+        </asp:ContentPlaceHolder>
+    </title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Content/Site.css" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="Home.aspx">
+                <i class="bi bi-briefcase-fill me-2"></i>Freelancer<span>Hub</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+                    aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto gap-1">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.aspx"><i class="bi bi-house me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.aspx"><i class="bi bi-info-circle me-1"></i>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.aspx"><i class="bi bi-envelope me-1"></i>Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Register.aspx"><i class="bi bi-person-plus me-1"></i>Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.aspx"><i class="bi bi-box-arrow-in-right me-1"></i>Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE CONTENT ===== -->
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p class="mb-1">
+                &copy; <%= DateTime.Now.Year %> <strong style="color:#fff;">FreelancerHub</strong> — Freelancer Marketplace for Students
+            </p>
+            <p class="mb-0" style="font-size:.8rem;">
+                <a href="Home.aspx">Home</a> &nbsp;|&nbsp;
+                <a href="About.aspx">About</a> &nbsp;|&nbsp;
+                <a href="Contact.aspx">Contact</a> &nbsp;|&nbsp;
+                <a href="Register.aspx">Register</a> &nbsp;|&nbsp;
+                <a href="Login.aspx">Login</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
+    </form>
+</body>
+</html>

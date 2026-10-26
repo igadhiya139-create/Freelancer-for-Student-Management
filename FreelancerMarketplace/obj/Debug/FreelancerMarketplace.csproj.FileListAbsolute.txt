@@ -1,0 +1,7 @@
+D:\New folder\FreelancerMarketplace\obj\Debug\FreelancerMarketplace.csproj.AssemblyReference.cache
+D:\New folder\FreelancerMarketplace\obj\Debug\FreelancerMarketplace.csproj.CoreCompileInputs.cache
+D:\New folder\FreelancerMarketplace\bin\FreelancerMarketplace.dll.config
+D:\New folder\FreelancerMarketplace\bin\FreelancerMarketplace.dll
+D:\New folder\FreelancerMarketplace\bin\FreelancerMarketplace.pdb
+D:\New folder\FreelancerMarketplace\obj\Debug\FreelancerMarketplace.dll
+D:\New folder\FreelancerMarketplace\obj\Debug\FreelancerMarketplace.pdb

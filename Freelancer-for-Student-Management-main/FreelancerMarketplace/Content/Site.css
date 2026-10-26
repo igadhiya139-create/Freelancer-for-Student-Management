@@ -1,0 +1,394 @@
+/* =====================================================
+   Freelancer Marketplace for Students — Custom CSS
+   ===================================================== */
+
+/* ---------- Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ---------- CSS Variables ---------- */
+:root {
+    --primary:        #4f46e5;
+    --primary-dark:   #3730a3;
+    --primary-light:  #818cf8;
+    --secondary:      #0ea5e9;
+    --accent:         #f59e0b;
+    --success:        #10b981;
+    --danger:         #ef4444;
+    --dark:           #1e1b4b;
+    --gray-50:        #f8fafc;
+    --gray-100:       #f1f5f9;
+    --gray-200:       #e2e8f0;
+    --gray-600:       #475569;
+    --gray-800:       #1e293b;
+    --shadow-sm:      0 1px 3px rgba(0,0,0,.08);
+    --shadow-md:      0 4px 16px rgba(79,70,229,.12);
+    --shadow-lg:      0 10px 40px rgba(79,70,229,.18);
+    --radius:         12px;
+    --radius-sm:      8px;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--gray-50);
+    color: var(--gray-800);
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary-dark) 100%) !important;
+    box-shadow: 0 2px 20px rgba(79,70,229,.3);
+    padding: 14px 0;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #fff !important;
+    letter-spacing: -0.3px;
+}
+
+.navbar-brand span {
+    color: var(--primary-light);
+}
+
+.nav-link {
+    color: rgba(255,255,255,.85) !important;
+    font-weight: 500;
+    font-size: .92rem;
+    padding: 6px 16px !important;
+    border-radius: 6px;
+    transition: all .2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #fff !important;
+    background: rgba(255,255,255,.12);
+}
+
+/* ---------- Page Wrapper ---------- */
+.page-wrapper {
+    min-height: calc(100vh - 140px);
+    padding: 40px 0 60px;
+}
+
+/* ---------- Section Headings ---------- */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 6px;
+}
+
+.section-subtitle {
+    color: var(--gray-600);
+    font-size: .95rem;
+    margin-bottom: 30px;
+}
+
+.title-bar {
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 99px;
+    margin-bottom: 10px;
+}
+
+/* ---------- Cards ---------- */
+.card-custom {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    padding: 32px;
+}
+
+/* ---------- Form Controls ---------- */
+.form-label {
+    font-weight: 600;
+    font-size: .875rem;
+    color: var(--gray-800);
+    margin-bottom: 6px;
+}
+
+.form-control, .form-select {
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: .9rem;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79,70,229,.15);
+    outline: none;
+}
+
+/* RadioButtonList rendered as table — override */
+.radio-group table { display: flex; gap: 16px; }
+.radio-group table td { padding: 0; }
+.radio-group input[type="radio"] { margin-right: 5px; accent-color: var(--primary); }
+.radio-group label { font-weight: 500; font-size: .9rem; }
+
+/* ---------- Buttons ---------- */
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 10px 32px;
+    font-weight: 600;
+    font-size: .95rem;
+    cursor: pointer;
+    transition: all .25s ease;
+    box-shadow: 0 4px 12px rgba(79,70,229,.3);
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(79,70,229,.4);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--dark) 100%);
+    color: #fff;
+}
+
+.btn-primary-custom:active { transform: translateY(0); }
+
+/* ---------- GridView ---------- */
+.grid-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.grid-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border-radius: var(--radius);
+    overflow: hidden;
+    font-size: .875rem;
+}
+
+.grid-table th {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary-dark) 100%);
+    color: #fff;
+    padding: 13px 16px;
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.grid-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--gray-100);
+    vertical-align: middle;
+    color: var(--gray-800);
+}
+
+.grid-table tr:last-child td { border-bottom: none; }
+
+.grid-table tr:hover td { background: var(--gray-50); }
+
+/* Edit / Delete link buttons inside GridView */
+.grid-table a, .grid-table input[type="submit"], .grid-table button {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: .8rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.btn-edit {
+    background: rgba(79,70,229,.1);
+    color: var(--primary);
+}
+.btn-edit:hover { background: var(--primary); color: #fff; }
+
+.btn-delete {
+    background: rgba(239,68,68,.1);
+    color: var(--danger);
+    margin-left: 6px;
+}
+.btn-delete:hover { background: var(--danger); color: #fff; }
+
+/* ---------- Hero (Home) ---------- */
+.hero-section {
+    background: linear-gradient(135deg, var(--dark) 0%, #312e81 50%, var(--primary) 100%);
+    color: #fff;
+    padding: 90px 0 70px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 99px;
+    padding: 6px 18px;
+    font-size: .82rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(8px);
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.hero-title span { color: var(--primary-light); }
+
+.hero-desc {
+    font-size: 1.05rem;
+    opacity: .85;
+    max-width: 580px;
+    margin: 0 auto 36px;
+    line-height: 1.7;
+}
+
+.hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+.btn-hero-primary {
+    background: #fff;
+    color: var(--primary-dark);
+    font-weight: 700;
+    padding: 13px 32px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: .95rem;
+    transition: all .25s;
+    box-shadow: 0 4px 20px rgba(0,0,0,.2);
+}
+.btn-hero-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,.25); color: var(--primary-dark); }
+
+.btn-hero-outline {
+    background: transparent;
+    color: #fff;
+    font-weight: 600;
+    padding: 13px 32px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: .95rem;
+    border: 2px solid rgba(255,255,255,.5);
+    transition: all .25s;
+}
+.btn-hero-outline:hover { background: rgba(255,255,255,.12); border-color: #fff; color: #fff; }
+
+/* Feature cards on Home */
+.feature-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-sm);
+    transition: transform .25s, box-shadow .25s;
+    height: 100%;
+}
+.feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+.feature-icon {
+    width: 52px; height: 52px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.feature-icon.purple { background: rgba(79,70,229,.1); }
+.feature-icon.blue   { background: rgba(14,165,233,.1); }
+.feature-icon.amber  { background: rgba(245,158,11,.1); }
+
+/* ---------- About Page ---------- */
+.about-card {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary-dark) 100%);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 40px;
+}
+
+/* ---------- Contact Page ---------- */
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+.contact-icon {
+    width: 44px; height: 44px;
+    background: rgba(79,70,229,.1);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    color: var(--primary);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary-dark) 100%);
+    color: rgba(255,255,255,.75);
+    text-align: center;
+    padding: 22px 0;
+    font-size: .875rem;
+}
+
+footer a { color: var(--primary-light); text-decoration: none; }
+footer a:hover { color: #fff; }
+
+/* ---------- Alert / Success Messages ---------- */
+.alert-success-custom {
+    background: rgba(16,185,129,.1);
+    border: 1px solid rgba(16,185,129,.3);
+    color: #065f46;
+    border-radius: var(--radius-sm);
+    padding: 12px 18px;
+    font-weight: 500;
+    font-size: .9rem;
+    margin-bottom: 20px;
+}
+
+/* ---------- Role Badge ---------- */
+.badge-student {
+    background: rgba(79,70,229,.12);
+    color: var(--primary);
+    padding: 3px 10px;
+    border-radius: 99px;
+    font-size: .78rem;
+    font-weight: 600;
+}
+.badge-client {
+    background: rgba(14,165,233,.12);
+    color: var(--secondary);
+    padding: 3px 10px;
+    border-radius: 99px;
+    font-size: .78rem;
+    font-weight: 600;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .card-custom { padding: 20px; }
+    .hero-section { padding: 60px 0 50px; }
+}
