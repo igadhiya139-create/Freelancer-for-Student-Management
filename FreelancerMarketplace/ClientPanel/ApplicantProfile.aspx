@@ -1,4 +1,4 @@
-<%@ Page Title="Applicant Profile" Language="C#" AutoEventWireup="true"
+﻿<%@ Page Title="Applicant Profile" Language="C#" AutoEventWireup="true"
          CodeFile="ApplicantProfile.aspx.cs" Inherits="ClientPanel_ApplicantProfile" %>
 <!DOCTYPE html>
 <html lang="en">
