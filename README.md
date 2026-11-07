@@ -1,4 +1,4 @@
-﻿# Freelancer Marketplace for Students
+# Freelancer Marketplace for Students
 
 A specialized web portal connecting students with client freelance opportunities, portfolio showcasing, and job applications.
 
@@ -12,6 +12,9 @@ A specialized web portal connecting students with client freelance opportunities
 - **Portfolio & Showcase**: Maintain past completed projects, project links, and file attachments.
 - **Skills Management**: Add and curate technical skills and proficiency badges.
 - **Notifications & Security**: Real-time alerts and credential management with hashing.
+
+### Admin Panel
+- System oversight, managing student and client accounts, tracking project lifecycle, application approvals, activity audit logs, and category/skills management.
 
 ### Client Panel
 - Project posting, milestone tracking, reviewing student applicants, and rating.
